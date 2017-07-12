@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% for project in projects %}
+            <div class="project" id = "project_" {{project}}>
+           <a href="/rendersource/{{rendersource}}/owner/{{owner}}/project/{{project}}"> {{project}}</a>
+           </div>
+        {% endfor %}
+        
+        {% include 'tables.html' %}
+     
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        number of z slices: {{numz}}
+
+        {% for collection in collections %}
+            <div class="collection" id = "collection_" {{collection}}>
+           <a href="/rendersource/{{rendersource}}/owner/{{owner}}/project/{{project}}/stack/{{stack}}/collection/{{collection['collectionId']['name']}}"> 
+                {{collection['collectionId']['name'] }} ({{collection['pairCount']}} matches)
+           </a>
+           </div>
+        {% endfor %}
+    </body>
+</html>

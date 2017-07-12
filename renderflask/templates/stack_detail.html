@@ -1,0 +1,27 @@
+
+
+<table>
+    <tr>
+    <th> stack name </th>
+    {% for key in stackInfo[0].keys() %}
+        <th> 
+            {{key}} 
+        </th>
+    {% endfor %}
+    </tr>
+
+    {% for stack in stackInfo %}
+        <tr>
+            <td>
+                    <a href="/rendersource/{{rendersource}}/owner/{{owner}}/project/{{stack['stackId']['project']}}/stack/{{stack['stackId']['stack']}}">  
+                        {{stack['stackId']['stack']}}
+                    </a>
+            </td>
+        {% for key, value in stack.iteritems() %}
+            <td> 
+                {{ value }}
+            </td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
