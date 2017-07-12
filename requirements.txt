@@ -1,2 +1,7 @@
 flask>=0.12.2
-renderapi
+git+git://github.com/fcollman/render-python.git@master
+numpy
+matplotlib
+mpld3
+bokeh
+pandas
